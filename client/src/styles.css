@@ -1,16 +1,28 @@
 body {
 	padding: 20px;
 	font-family: new;
+	font-size: 20px;
 }
 
 a, button {
-	margin: 0 5px;
+	margin: 0px 10px;
 	cursor: pointer;
 }
 
+
+ p{
+	 font-size: 20px;
+ }
 .NavBar {
 	margin-bottom: 20px
 }
+
+ul.nav.navbar-nav {
+    display: inline-block;
+    padding: 0px;
+    margin-top: -40px;
+    font-size: 15px;
+	}
 
 .dash {
 	border-color: rgb(201, 41, 233);
@@ -21,25 +33,23 @@ a, button {
 .h2 {
 	text-align: center;
 }
-
+span.caret{
+	display: none;
+}
 aside {
 	border-left-color: rgb(201, 41, 233);
 	border-left-style: dashed;
 	border-left-width: 1px;
 	padding: 20px 0;
 }
-ul.nav.navbar-nav{
-    display: inline-block;
-		padding: 0px;
-		font-size: 15px;
+
+span.navbar-brand {
+    padding: 20px;
+    font-size: 20px;
 }
 
-a.navbar-brand, navbar-brand{
-	font-size: 20px;
-	margin-bottom: -52px;
-	align-content: center;
-	padding: 0px;
-
+A:visited{
+	color: rgb(201, 41, 233) !;
 }
 
 

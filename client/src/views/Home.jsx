@@ -22,7 +22,7 @@ const Home = (props) => {
 			          <i className="fa fa-circle fa-stack-2x text-partmint"></i>
 			          <i className="fa fa-home fa-stack-1x fa-inverse" style={{"color": "#99ffbb"}}></i>
 			        </span>
-			        <h4 className="service-heading">Recycle</h4>
+			        <h2 className="service-heading">Recycle</h2>
 			        <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repudiandae praesentium illo ducimus odit ipsum, natus facilis quas enim animi inventore officia! Deserunt, excepturi, eaque. Blanditiis dolores voluptatibus dolore velit.</p>
 			      </div>
 			      <div className="col-md-4">
@@ -30,7 +30,7 @@ const Home = (props) => {
 			          <i className="fa fa-circle fa-stack-2x text-partmint"></i>
 			          <i className="fa fa-handshake-o fa-stack-1x fa-inverse" style={{"color": "#99ffbb"}}></i>
 			        </span>
-			        <h4 className="service-heading">Convert</h4>
+			        <h2 className="service-heading">Convert</h2>
 			        <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ut dolores asperiores quos praesentium dicta illo quasi voluptatibus laborum, totam, ratione perspiciatis. Tempore repellendus facilis ratione architecto, fuga! Earum, ea.</p>
 			      </div>
 			      <div className="col-md-4">
@@ -38,7 +38,7 @@ const Home = (props) => {
 			          <i className="fa fa-circle fa-stack-2x text-partmint"></i>
 			          <i className="fa fa-plus-square-o fa-stack-1x fa-inverse" style={{"color":"#99ffbb"}}></i>
 			        </span>
-			        <h4 className="service-heading">Vinty Library</h4>
+			        <h2 className="service-heading">Vinty Library</h2>
 			        <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci nemo blanditiis at, ut nostrum assumenda, soluta, provident tenetur tempora iusto, dignissimos facilis nesciunt aliquam deserunt. Eum rem sapiente quos libero.</p>
 			      </div>
 			    </div>
