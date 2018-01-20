@@ -7,6 +7,10 @@ a, button {
 	margin: 0 5px;
 	cursor: pointer;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6117fdeee70e02e150b3806f3b0f198b702e8ae4
 .NavBar {
 	margin-bottom: 20px
 }
@@ -22,6 +26,7 @@ aside {
 	border-left-color: rgb(201, 41, 233);
 	border-left-style: dashed;
 	border-left-width: 1px;
+	padding: 20px 0;
 }
 ul.nav.navbar-nav{
     display: inline-block;
