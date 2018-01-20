@@ -1,5 +1,6 @@
 body {
 	padding: 20px;
+	font-family: new;
 }
 
 a, button {
@@ -7,6 +8,21 @@ a, button {
 	cursor: pointer;
 }
 
-.NavBar {
-	margin-bottom: 20px
+ul.nav.navbar-nav{
+    display: inline-block;
+		padding: 0px;
+		font-size: 15px;
+}
+
+a.navbar-brand, navbar-brand{
+	font-size: 20px;
+	margin-bottom: -52px;
+	align-content: center;
+	padding: 0px;
+
+}
+
+
+div.container{
+	align-content: center;
 }
