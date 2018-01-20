@@ -24,12 +24,14 @@ ul.nav.navbar-nav {
     font-size: 15px;
 	}
 
+.NavBar {
+	margin-bottom: 20px
+}
 .dash {
 	border-color: rgb(201, 41, 233);
 	border-width: 1px;
 	border-style: dotted;
 }
-
 .h2 {
 	text-align: center;
 }
@@ -51,8 +53,6 @@ span.navbar-brand {
 A:visited{
 	color: rgb(201, 41, 233) !;
 }
-
-
 div.container{
 	align-content: center;
 }
