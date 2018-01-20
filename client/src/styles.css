@@ -1,5 +1,6 @@
 body {
 	padding: 20px;
+	font-family: new;
 }
 
 a, button {
@@ -7,6 +8,43 @@ a, button {
 	cursor: pointer;
 }
 
+<<<<<<< HEAD
 .NavBar {
 	margin-bottom: 20px
 }
+
+.dash {
+	border-color: rgb(201, 41, 233);
+	border-width: 1px;
+	border-style: dotted;
+}
+
+.h2 {
+	text-align: center;
+}
+
+aside {
+	border-left-color: rgb(201, 41, 233);
+	border-left-style: dashed;
+	border-left-width: 1px;
+}
+=======
+ul.nav.navbar-nav{
+    display: inline-block;
+		padding: 0px;
+		font-size: 15px;
+}
+
+a.navbar-brand, navbar-brand{
+	font-size: 20px;
+	margin-bottom: -52px;
+	align-content: center;
+	padding: 0px;
+
+}
+
+
+div.container{
+	align-content: center;
+}
+>>>>>>> e7bdac5e1e54bd65df0354af07e1bed0596bce1d
