@@ -36,6 +36,20 @@ function logIn(credentials) {
       })
 }
 
+function signUp(userInfo) {
+	return clientAuth({ method: 'post', url: '/api/users', data: userInfo})
+		.then(res => {
+//then store the return token if there is one
+			const token = res.data.token
+			if(token) {
+				clientAuth.defaults.headers.common.token = setToken(token)
+				return jwtDecode(token)
+			} else {
+				return false
+			}
+		})
+}
+
 function logOut() {
     localStorage.removeItem('token')
     delete clientAuth.defaults.headers.common.token
@@ -45,5 +59,7 @@ function logOut() {
 export default {
     getCurrentUser,
     logIn,
-    logOut
+    logOut,
+    signUp,
+
 }

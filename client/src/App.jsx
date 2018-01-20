@@ -6,7 +6,6 @@ import NavBar from './NavBar'
 import LogIn from './views/LogIn'
 import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
-import VIP from './views/VIP'
 import Home from './views/Home'
 
 class App extends React.Component {
@@ -28,7 +27,7 @@ class App extends React.Component {
 		clientAuth.logOut()
 		this.setState({ currentUser: null })
 	}
-	
+
 	render() {
 		console.log(this.state)
 		const { currentUser } = this.state
@@ -43,9 +42,6 @@ class App extends React.Component {
 						return <LogOut onLogOut={this.logOut.bind(this)} />
 					}} />
 					<Route path="/signup" component={SignUp} />
-					<Route path="/vip" render={(props) => {
-						return currentUser ? <VIP {...props} /> : <Redirect to='/' />
-					}} />
 					<Route path="/" component={Home} />
 				</Switch>
 			</div>
