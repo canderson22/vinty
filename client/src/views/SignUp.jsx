@@ -22,10 +22,9 @@ onFormSubmit(e) {
 	e.preventDefault()
 	clientAuth.signUp(this.state.fields)
 		.then(user => {
-			console.log(user)
 			this.setState({ fields: { email: '', password: '', name: ''}})
 			if(user) {
-				this.props.onLoginSuccess()
+				this.props.onLoginSuccess(user)
 				this.props.history.push('/')
 			}
 		})

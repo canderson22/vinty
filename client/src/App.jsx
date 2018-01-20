@@ -41,7 +41,9 @@ class App extends React.Component {
 					<Route path="/logout" render={(props) => {
 						return <LogOut onLogOut={this.logOut.bind(this)} />
 					}} />
-					<Route path="/signup" component={SignUp} onLoginSuccess={this.onLoginSuccess.bind(this)} />
+					<Route path="/signup" render={(props) => {
+						return <SignUp {...props} onLoginSuccess={this.onLoginSuccess.bind(this)} />
+					}} />
 					<Route path="/" component={Home} />
 				</Switch>
 			</div>
