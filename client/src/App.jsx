@@ -8,6 +8,7 @@ import LogIn from './views/LogIn'
 import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
 import Home from './views/Home'
+import Dashboard from './views/Dashboard';
 
 class App extends React.Component {
 	state = {
@@ -36,6 +37,9 @@ class App extends React.Component {
 			<div className='App'>
 				<NavBar />
 				<Switch>
+					<Route path="/dashboard" render={(props) => {
+						return <Dashboard {...props} />
+					}} />
 					<Route path="/login" render={(props) => {
 						return <LogIn {...props} onLoginSuccess={this.onLoginSuccess.bind(this)} />
 					}} />
