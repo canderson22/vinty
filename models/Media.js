@@ -13,4 +13,4 @@ const
 
 const Media = mongoose.model('Media', mediaSchema)
 
-export default Media
+module.exports = Media

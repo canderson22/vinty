@@ -7,7 +7,8 @@ const
 	mongoose = require('mongoose'),
 	MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/react-express-jwt',
 	PORT = process.env.PORT || 3001,
-	usersRoutes = require('./routes/users.js')
+	usersRoutes = require('./routes/users.js'),
+	mediaRoutes = require('./routes/media.js')
 
 mongoose.connect(MONGODB_URI, (err) => {
 	console.log(err || `Connected to MongoDB.`)
@@ -21,6 +22,7 @@ app.get('/api', (req, res) => {
 })
 
 app.use('/api/users', usersRoutes)
+app.use('/api/media', mediaRoutes)
 
 app.listen(PORT, (err) => {
 	console.log(err || `Server running on port ${PORT}.`)
