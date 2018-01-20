@@ -25,7 +25,7 @@ onFormSubmit(e) {
 			this.setState({ fields: { email: '', password: '', name: ''}})
 			if(user) {
 				this.props.onLoginSuccess(user)
-				this.props.history.push('/')
+				this.props.history.push('/dashboard')
 			}
 		})
 }
