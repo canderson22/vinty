@@ -7,21 +7,21 @@ a, button {
 	margin: 0 5px;
 	cursor: pointer;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 6117fdeee70e02e150b3806f3b0f198b702e8ae4
 .NavBar {
 	margin-bottom: 20px
 }
-
 .dash {
 	border-color: rgb(201, 41, 233);
 	border-width: 1px;
 	border-style: dotted;
 }
-
 .h2 {
 	text-align: center;
 }
-
 aside {
 	border-left-color: rgb(201, 41, 233);
 	border-left-style: dashed;
@@ -33,7 +33,6 @@ ul.nav.navbar-nav{
 		padding: 0px;
 		font-size: 15px;
 }
-
 a.navbar-brand, navbar-brand{
 	font-size: 20px;
 	margin-bottom: -52px;
@@ -41,8 +40,6 @@ a.navbar-brand, navbar-brand{
 	padding: 0px;
 
 }
-
-
 div.container{
 	align-content: center;
 }
