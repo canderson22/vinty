@@ -6,8 +6,7 @@ class SignUp extends React.Component {
 	fields: {
 		email: '',
 		password: '',
-		name: '',
-		location: '',
+		name: ''
 	}
 }
 onInputChange(e) {
@@ -21,9 +20,10 @@ onInputChange(e) {
 
 onFormSubmit(e) {
 	e.preventDefault()
-	clientAuth.logIn(this.state.fields)
+	clientAuth.signUp(this.state.fields)
 		.then(user => {
-			this.setState({ fields: { email: '', password: ''}})
+			console.log(user)
+			this.setState({ fields: { email: '', password: '', name: ''}})
 			if(user) {
 				this.props.onLoginSuccess()
 				this.props.history.push('/')
