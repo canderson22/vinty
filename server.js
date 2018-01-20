@@ -8,7 +8,8 @@ const
 	MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/vinty',
 	PORT = process.env.PORT || 3001,
 	usersRoutes = require('./routes/users.js'),
-	mediaRoutes = require('./routes/media.js')
+	mediaRoutes = require('./routes/media.js'),
+	adminRoutes = require('./routes/admin.js')
 
 mongoose.connect(MONGODB_URI, (err) => {
 	console.log(err || `Connected to MongoDB.`)
@@ -23,6 +24,7 @@ app.get('/api', (req, res) => {
 
 app.use('/api/users', usersRoutes)
 app.use('/api/media', mediaRoutes)
+app.use('/api/admin', adminRoutes)
 
 app.listen(PORT, (err) => {
 	console.log(err || `Server running on port ${PORT}.`)

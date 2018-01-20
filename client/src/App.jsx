@@ -8,6 +8,7 @@ import LogOut from './views/LogOut'
 import SignUp from './views/SignUp'
 import Home from './views/Home'
 import Dashboard from './views/Dashboard';
+import AdminDash from './views/AdminDash'
 
 class App extends React.Component {
 	state = {
@@ -30,7 +31,6 @@ class App extends React.Component {
 	}
 
 	render() {
-		console.log(this.state)
 		const { currentUser } = this.state
 		return (
 			<div className='App'>
@@ -47,6 +47,16 @@ class App extends React.Component {
 					}} />
 					<Route path="/signup" render={(props) => {
 						return <SignUp {...props} onLoginSuccess={this.onLoginSuccess.bind(this)} />
+					}} />
+					<Route path="/admin/dash" render={(props) => {
+						if (this.state.currentUser) {
+							if(this.state.currentUser.admin) {
+								return <AdminDash {...props} />
+							} else {
+								return <Home />
+							}
+						} 
+						return <Home />
 					}} />
 					<Route path="/" component={Home} />
 				</Switch>

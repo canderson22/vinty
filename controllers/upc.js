@@ -1,4 +1,3 @@
-var sem3 = require('semantics3-node')(api_key,api_secret);
 
 sem3.products.products_field( "upc", "883974958450" );
 

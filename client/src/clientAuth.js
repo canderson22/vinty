@@ -37,6 +37,7 @@ function logIn(credentials) {
 }
 
 function signUp(userInfo) {
+    userInfo.admin = false
 	return clientAuth({ method: 'post', url: '/api/users', data: userInfo})
 		.then(res => {
 //then store the return token if there is one
