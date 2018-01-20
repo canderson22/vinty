@@ -8,7 +8,6 @@ a, button {
 	cursor: pointer;
 }
 
-<<<<<<< HEAD
 .NavBar {
 	margin-bottom: 20px
 }
@@ -27,8 +26,8 @@ aside {
 	border-left-color: rgb(201, 41, 233);
 	border-left-style: dashed;
 	border-left-width: 1px;
+	padding: 20px 0;
 }
-=======
 ul.nav.navbar-nav{
     display: inline-block;
 		padding: 0px;
@@ -47,4 +46,3 @@ a.navbar-brand, navbar-brand{
 div.container{
 	align-content: center;
 }
->>>>>>> e7bdac5e1e54bd65df0354af07e1bed0596bce1d

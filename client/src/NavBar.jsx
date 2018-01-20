@@ -8,7 +8,8 @@ const NavBar = (props) => {
 			<Navbar inverse collapseOnSelect>
 		<Navbar.Header>
 			<Navbar.Brand>
-				<a href="#brand">Vinty</a>
+				Vinty
+				{/* <a href="#brand">Vinty</a> */}
 			</Navbar.Brand>
 			<Navbar.Toggle />
 		</Navbar.Header>

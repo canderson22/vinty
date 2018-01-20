@@ -16,7 +16,7 @@ class Dashboard extends React.Component {
                 <h1>Vinty Dashboard</h1>
                 <div className="container-fluid dash">
                     <div className="row">
-                        <div className="column column-80">
+                        <div className="col-md-9">
                             <div className="container">
                                 {
                                     this.state.media.length > 0
@@ -24,13 +24,16 @@ class Dashboard extends React.Component {
                                         <h1>media</h1>
                                     )
                                     : (
-                                        <h2 className="h2">No media has been upload</h2>
+                                        <h2 className="h2">No media has been uploaded</h2>
                                     )
                                 }
                             </div>
                         </div>
-                        <aside className='column'>
-                            <h4>Ready to send your media</h4>
+                        <aside className='col-md-3'>
+                          <div className='container'>
+                            <h4 className='text-center'>Ready to send your media</h4>
+                            <button className='btn btn-block btn-dark'>Vinty</button>
+                          </div>
                         </aside>
                     </div>
                 </div>
