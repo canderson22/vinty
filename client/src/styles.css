@@ -10,3 +10,19 @@ a, button {
 .NavBar {
 	margin-bottom: 20px
 }
+
+.dash {
+	border-color: rgb(201, 41, 233);
+	border-width: 1px;
+	border-style: dotted;
+}
+
+.h2 {
+	text-align: center;
+}
+
+aside {
+	border-left-color: rgb(201, 41, 233);
+	border-left-style: dashed;
+	border-left-width: 1px;
+}

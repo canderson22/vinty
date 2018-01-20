@@ -56,10 +56,23 @@ function logOut() {
     return true
 }
 
+// get all media content
+
+function getMedia() {
+    return clientAuth({
+        method: 'get',
+        url: '/api/media'
+    })
+    .then(res => res.data)
+    .then(media => {
+        return media
+    })
+}
+
 export default {
     getCurrentUser,
     logIn,
     logOut,
     signUp,
-
+    getMedia
 }
