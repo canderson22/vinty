@@ -1,7 +1,6 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import clientAuth from './clientAuth.js'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 import NavBar from './NavBar'
 import LogIn from './views/LogIn'
@@ -10,6 +9,7 @@ import SignUp from './views/SignUp'
 import Home from './views/Home'
 import Dashboard from './views/Dashboard';
 import AdminDash from './views/AdminDash'
+import ConvertForm from './views/Convert'
 
 class App extends React.Component {
 	state = {
@@ -39,6 +39,9 @@ class App extends React.Component {
 				<Switch>
 					<Route path="/dashboard" render={(props) => {
 						return <Dashboard {...props} />
+					}} />
+					<Route path='/convert' render={(props) => {
+						return <ConvertForm {...props} />
 					}} />
 					<Route path="/login" render={(props) => {
 						return <LogIn {...props} onLoginSuccess={this.onLoginSuccess.bind(this)} />

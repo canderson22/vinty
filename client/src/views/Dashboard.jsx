@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import clientAuth from '../clientAuth'
 
 class Dashboard extends React.Component {
@@ -32,7 +33,7 @@ class Dashboard extends React.Component {
                         <aside className='col-md-3'>
                           <div className='container'>
                             <h4 className='text-center'>Ready to send your media</h4>
-                            <button className='btn btn-block btn-dark'>Vinty</button>
+                            <Link to='/convert' className='btn btn-block btn-dark'>Vinty</Link>
                           </div>
                         </aside>
                     </div>
