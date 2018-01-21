@@ -9,7 +9,8 @@ const
 	PORT = process.env.PORT || 3001,
 	usersRoutes = require('./routes/users.js'),
 	mediaRoutes = require('./routes/media.js'),
-	adminRoutes = require('./routes/admin.js')
+	adminRoutes = require('./routes/admin.js'),
+	ordersRoutes = require('./routes/orders.js')
 
 mongoose.connect(MONGODB_URI, (err) => {
 	console.log(err || `Connected to MongoDB.`)
@@ -25,6 +26,7 @@ app.get('/api', (req, res) => {
 app.use('/api/users', usersRoutes)
 app.use('/api/media', mediaRoutes)
 app.use('/api/admin', adminRoutes)
+app.use('/api/orders', ordersRoutes)
 
 app.listen(PORT, (err) => {
 	console.log(err || `Server running on port ${PORT}.`)
