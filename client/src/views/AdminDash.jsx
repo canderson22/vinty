@@ -2,10 +2,15 @@ import React from 'react';
 import axios from 'axios';
 import splitArray from 'split-array'
 
+import UserDisplay from './AdminUserList'
+
 class AdminDash extends React.Component {
     state = {
-		usuarios: [],
+        usuarios: [],
+        currentUser: null
     }
+
+    viewUser = this.viewUser.bind(this)
     
     componentDidMount() {
         axios({method: 'get', url: '/api/users'})
@@ -15,13 +20,17 @@ class AdminDash extends React.Component {
         })
       }
 
+      viewUser(e) {
+        var user = JSON.parse(e.target.value)
+        this.setState({currentUser: user})
+      }
+
     render() {
         var userRow = splitArray(this.state.usuarios, 1)
-		console.log(userRow)
         return (
             <div className="adminDash">
                 <h1>Admin Page</h1>
-                <div className="container" style={{"margin-left": "0px"}}>
+                <div className="container" style={{"marginLeft": "0px"}}>
                     <div className="row">
                         <div className="col-md-3">
                         <h3>Users</h3>
@@ -34,7 +43,7 @@ class AdminDash extends React.Component {
                                                 row.map(user => {
                                                     return (
                                                         <div className='column' key={user._id}>
-                                                            <strong>Title: {user.name}</strong>
+                                                            <button value={JSON.stringify(user)} onClick={this.viewUser} className='btn btn-dark'>{user.name}</button>
                                                         </div>
                                                     )
                                                 })
@@ -48,6 +57,7 @@ class AdminDash extends React.Component {
                         </div>
                         <div className="col-md-9">
                         <h3>Stuff</h3>
+                            <UserDisplay user={this.state.currentUser}/>
                         </div>
                     </div>
                 </div>
