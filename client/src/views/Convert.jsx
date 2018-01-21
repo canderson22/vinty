@@ -19,15 +19,19 @@ class ConvertForm extends Component {
 
     onFormSubmit(e) {
         e.preventDefault()
-
+        alert("Thank you, just send us your stuff")
+            this.props.history.push('/dashboard')
+        clientAuth.sendForm(this.state.fields, () => {
+            alert("Thank you, just send us your stuff")
+            this.props.history.push('/dashboard')
+        })
     }
 
     onInputChange(e) {
-        console.log({[e.target.name]: e.target.value})
         this.setState({
             fields: {
                 ...this.state.fields,
-                [e.target.name]: e.target.value
+                [e.target.name]: Number(e.target.value)
             }
         })
     }
@@ -36,7 +40,7 @@ class ConvertForm extends Component {
         const { dvds, cds, videoGames, vhs, casettes, vinyl } = this.state.fields
         return (
             <div className='ConvertForm'>
-                <h3 className='text-center'>Fill out the from and send us your stuff!</h3>
+                <h3 className='text-center'>Fill out the form and send us your stuff!</h3>
                 <h5 className='text-center'>It's that easy!!!</h5>
                 <form className='container' onSubmit={this.onFormSubmit} onChange={this.onInputChange}>
                     <div className="row">
