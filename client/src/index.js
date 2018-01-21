@@ -4,6 +4,8 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'milligram'
 import './styles.css'
+import 'react-fontawesome'
+import 'font-awesome/css/font-awesome.css'
 
 
 

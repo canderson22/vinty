@@ -1,6 +1,6 @@
 body {
 	padding: 20px;
-	font-family: new;
+	font-family: Caviar Dreams,Helvetica;
 	font-size: 20px;
 }
 
@@ -13,19 +13,21 @@ a, button {
  p{
 	 font-size: 20px;
  }
-.NavBar {
-	margin-bottom: 20px
-}
 
 ul.nav.navbar-nav {
     display: inline-block;
     padding: 0px;
     margin-top: -40px;
     font-size: 15px;
+		position:fixed !;
 	}
+a.btn.btn-primary{
+	background-color: rgb(201, 41, 233);
+	border: 1px solid rgb(201, 41, 233);
+}
+.navbar {
+	margin-bottom: 20px;
 
-.NavBar {
-	margin-bottom: 20px
 }
 .dash {
 	border-color: rgb(201, 41, 233);
@@ -55,4 +57,12 @@ A:visited{
 }
 div.container{
 	align-content: center;
+
+}
+
+navbar-brand{
+	font-size: 30px;
+}
+form{
+	width: 50%;
 }
