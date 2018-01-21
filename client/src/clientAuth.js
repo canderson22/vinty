@@ -71,11 +71,21 @@ function getMedia() {
 }
 
 // send your form
+function sendForm(data, cb) {
+    return clientAuth({
+        method: 'post',
+        url: `/api/orders/${getCurrentUser()._id}`
+    })
+    .then(res => {
+        cb()
+    })
+}
 
 export default {
     getCurrentUser,
     logIn,
     logOut,
     signUp,
-    getMedia
+    getMedia,
+    sendForm
 }

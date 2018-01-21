@@ -19,15 +19,19 @@ class ConvertForm extends Component {
 
     onFormSubmit(e) {
         e.preventDefault()
-
+        alert("Thank you, just send us your stuff")
+            this.props.history.push('/dashboard')
+        clientAuth.sendForm(this.state.fields, () => {
+            alert("Thank you, just send us your stuff")
+            this.props.history.push('/dashboard')
+        })
     }
 
     onInputChange(e) {
-        console.log({[e.target.name]: e.target.value})
         this.setState({
             fields: {
                 ...this.state.fields,
-                [e.target.name]: e.target.value
+                [e.target.name]: Number(e.target.value)
             }
         })
     }

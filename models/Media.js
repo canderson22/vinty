@@ -8,6 +8,7 @@ const
         recycle: { type: Boolean },
         sell: { type: Boolean },
         sendBack: { type: Boolean },
+        content: { type: String },
         user: {type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true}
     })
 //
