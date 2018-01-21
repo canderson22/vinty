@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Navbar, NavItem, NavDropdown, Nav,MenuItem}from 'react-bootstrap'
 
+
 const NavBar = (props) => {
 	return (
 		<div className='NavBar'>
@@ -16,25 +17,37 @@ const NavBar = (props) => {
 		<Navbar.Collapse>
 			<Nav>
 				<NavItem>
-				<Link eventKey={1} to="/">
-					Home
-				</Link>
-			</NavItem>
-			<NavItem>
-				<Link eventKey={1} to="/login">
-					Log in
-				</Link>
+					<Link eventKey={1} to="/">
+						Home
+					</Link>
 				</NavItem>
-				<NavItem>
-				<Link eventKey={2} to="/signup">
-					Sign Up
-				</Link>
-				</NavItem>
-				<NavItem>
-				<Link eventKey={2} to="/logout">
-					Log Out
-				</Link>
-				</NavItem>
+				{
+					!props.currentUser ?
+					<NavItem>
+						<Link eventKey={1} to="/login">
+							Log in
+						</Link>
+					</NavItem>
+					: ""
+				}
+				{
+					!props.currentUser ?
+					<NavItem>
+						<Link eventKey={2} to="/signup">
+							Sign Up
+						</Link>
+					</NavItem>
+					: ""
+				}
+				{
+					props.currentUser ?
+					<NavItem>
+						<Link eventKey={2} to="/logout">
+							Log Out
+						</Link>
+					</NavItem>
+					: ""
+				}
 			</Nav>
 		</Navbar.Collapse>
 	</Navbar>

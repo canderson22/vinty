@@ -35,7 +35,7 @@ class App extends React.Component {
 		const { currentUser } = this.state
 		return (
 			<div className='App'>
-				<NavBar />
+				<NavBar currentUser={currentUser} />
 				<Switch>
 					<Route path="/dashboard" render={(props) => {
 						return <Dashboard {...props} />
@@ -59,7 +59,7 @@ class App extends React.Component {
 							} else {
 								return <Home />
 							}
-						} 
+						}
 						return <Home />
 					}} />
 					<Route path="/" component={Home} />
