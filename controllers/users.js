@@ -4,7 +4,7 @@ const signToken = require('../serverAuth.js').signToken
 module.exports = {
 	// list all users
 	index: (req, res) => {
-		User.find({}, (err, users) => {
+		User.find({}).populate('media').exec((err, users) => {
 			res.json(users)
 		})
 	},

@@ -5,7 +5,8 @@ const
 		name: { type: String },
 		email: { type: String, required: true, unique: true },
 		password: { type: String, required: true },
-		admin: {type: Boolean, required: true}
+		admin: {type: Boolean, required: true},
+		media: {type: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Media' }]}
 	})
 
 // adds a method to a user document object to create a hashed password

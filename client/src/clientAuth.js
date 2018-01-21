@@ -70,6 +70,8 @@ function getMedia() {
     })
 }
 
+// send your form
+
 export default {
     getCurrentUser,
     logIn,
