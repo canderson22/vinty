@@ -21,37 +21,37 @@ module.exports = {
     },
 
     create: (req, res) => {
-        if (req.body.upc) {
-            sem3.products.products_field( "upc", req.body.upc);
-            sem3.products.get_products(
-                function(err, products) {
-                    if (err) {
-                        console.log("Couldn't execute request: get_products");
-                        return;
-                    }
-                    var product = JSON.parse(products)
-                    var title = product.results[0].name
-                    var category = product.results[0].category
-                    var images = product.results[0].images[0]
+        // if (req.body.upc) {
+        //     sem3.products.products_field( "upc", req.body.upc);
+        //     sem3.products.get_products(
+        //         function(err, products) {
+        //             if (err) {
+        //                 console.log("Couldn't execute request: get_products");
+        //                 return;
+        //             }
+        //             var product = JSON.parse(products)
+        //             var title = product.results[0].name
+        //             var category = product.results[0].category
+        //             var images = product.results[0].images[0]
 
-                    var media = {
-                        title,
-                        category,
-                        images,
-                        user: req.body.user
-                    }
-                    // res.json(media)
-                    Media.create(media, (err, newMedia) => {
-                        if (err) return console.log(err)
-                        res.json(newMedia)
-                    })
-                }
-            );
-            return
-        }
-
+        //             var media = {
+        //                 title,
+        //                 category,
+        //                 images,
+        //                 user: req.body.user
+        //             }
+        //             // res.json(media)
+        //             Media.create(media, (err, newMedia) => {
+        //                 if (err) return console.log(err)
+        //                 res.json(newMedia)
+        //             })
+        //         }
+        //     );
+        //     return
+        // }
         Media.create(req.body, (err, newMedia) => {
             if (err) return console.log(err)
+            console.log(newMedia)
             res.json(newMedia)
         })
     },

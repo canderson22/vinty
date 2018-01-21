@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import splitArray from 'split-array'
-
+import splitArray from 'split-array';
 import UserDisplay from './AdminUserList'
 
 class AdminDash extends React.Component {
@@ -56,7 +55,7 @@ class AdminDash extends React.Component {
                         }
                         </div>
                         <div className="col-md-9">
-                        <h3>Stuff</h3>
+                        <h3>Users Vinty Library</h3>
                             <UserDisplay user={this.state.currentUser}/>
                         </div>
                     </div>
